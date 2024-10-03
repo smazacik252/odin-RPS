@@ -1,5 +1,19 @@
 let humanScore = 0;
 let computerScore = 0;
+
+function playGame() {
+    for(let i = 0; i < 5; ++i) {
+        playRound();
+    }
+    if (humanScore > computerScore) {
+        console.log("Human won");
+    } else if (humanScore < computerScore) {
+        console.log("Computer won");
+    } else {
+        console.log("Its a draw");
+    }
+}
+
 function playRound() {
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
